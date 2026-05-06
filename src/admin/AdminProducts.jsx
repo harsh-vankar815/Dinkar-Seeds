@@ -78,7 +78,7 @@ const AdminProducts = () => {
             {/* IMAGE */}
             <img
               src={
-                product.img.startsWith("http")
+                product.img.startsWith("http") || product.img?.startsWith("data:image")
                   ? product.img
                   : `${server_url}${product.img}`
               }

@@ -145,7 +145,7 @@ const AllProducts = () => {
               <img
                 className="w-full h-32 object-cover rounded-lg"
                 src={
-                  product.img?.startsWith("http")
+                  product.img?.startsWith("http") || product.img?.startsWith("data:image")
                     ? product.img
                     : `${server_url}${product.img}`
                 }
