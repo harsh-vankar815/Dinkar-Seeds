@@ -58,7 +58,7 @@ const SingleProduct = () => {
         <div className="flex justify-center">
           <img
             src={
-              product.img?.startsWith("http")
+              product.img?.startsWith("http") || product.img?.startsWith("data:image")
                 ? product.img
                 : `${server_url}${product.img}`
             }
